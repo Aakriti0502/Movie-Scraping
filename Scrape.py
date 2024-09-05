@@ -4,8 +4,14 @@ import csv
 import time
 
 # Input and output CSV file paths
+<<<<<<< HEAD
 input_csv = r'E:\Movie Data Scraping\NameLink.csv'
 output_csv = r'E:\Movie Data Scraping\Scraped_data.csv'
+=======
+input_csv ='/home/priyanshu/Documents/ASSIGNMENT/mega project/NameLink.csv'
+
+output_csv = 'Scraped_dataA.csv'
+>>>>>>> c56c452 (update all data)
 
 # Function to scrape data from a given URL
 def scrape_data(url):

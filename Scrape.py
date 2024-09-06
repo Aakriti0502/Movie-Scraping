@@ -3,15 +3,9 @@ from lxml import html
 import csv
 import time
 
-# Input and output CSV file paths
-<<<<<<< HEAD
+
 input_csv = r'E:\Movie Data Scraping\NameLink.csv'
 output_csv = r'E:\Movie Data Scraping\Scraped_data.csv'
-=======
-input_csv ='/home/priyanshu/Documents/ASSIGNMENT/mega project/NameLink.csv'
-
-output_csv = 'Scraped_dataA.csv'
->>>>>>> c56c452 (update all data)
 
 # Function to scrape data from a given URL
 def scrape_data(url):
@@ -19,7 +13,7 @@ def scrape_data(url):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
     }
 
-    # Define common XPath queries
+
     xpaths = {
         "movie_name": '/html/body/section/div/section/h1/span/text()',
         "screenshot_links": '/html/body/section/div/section/main/div/h3/a/img/@src',
@@ -34,9 +28,9 @@ def scrape_data(url):
     }
 
     try:
-        # Send a GET request to the URL with a timeout and headers
+     
         response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()  # Raise an exception if the request was unsuccessful
+        response.raise_for_status()
 
         # Parse the content using lxml
         tree = html.fromstring(response.content)
